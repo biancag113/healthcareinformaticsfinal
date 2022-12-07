@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Amplify, API, graphqlOperation } from 'aws-amplify'
 import { createMMG } from './graphql/mutations'
-import { listMMG } from './graphql/queries'
+import { listMMGS } from './graphql/queries'
 
 import awsExports from "./aws-exports";
 Amplify.configure(awsExports);
@@ -22,8 +22,8 @@ const Form = () => {
 
   async function fetchMMG() {
     try {
-      const mmgData = await API.graphql(graphqlOperation(listMMG))
-      const mmgs = mmgData.data.listMMG.items
+      const mmgData = await API.graphql(graphqlOperation(listMMGS))
+      const mmgs = mmgData.data.listMMGS.items
       setMMG(mmgs)
     } catch (err) { console.log('error fetching mmgs') }
   }

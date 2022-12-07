@@ -56,7 +56,7 @@ export const getMMG = /* GraphQL */ `
     }
   }
 `;
-export const listMMG = /* GraphQL */ `
+export const listMMGS = /* GraphQL */ `
   query ListMMGS(
     $filter: ModelMMGFilterInput
     $limit: Int
