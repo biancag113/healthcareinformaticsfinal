@@ -19,7 +19,7 @@ Password: password
 ### Build
 
 The platform uses a CDC MMG from CDC.gov found here:
-
+https://ndc.services.cdc.gov/mmgpage/congenital-syphilis-message-mapping-guide/
 
 The question and answers are converted to HL7.
 
