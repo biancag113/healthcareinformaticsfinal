@@ -189,16 +189,22 @@ const Form = () => {
 
       <h4>Maternal Laboratory Interpretive Information</h4>
         <input
-              onChange={event => setInput('name', event.target.value)}
+              onChange={event => setInput('nontreponemaltestatfirstvisit', event.target.value)}
               style={styles.input}
-              value={formState.name}
-              placeholder="Name"
+              value={formState.nontreponemaltestatfirstvisit}
+              placeholder="Non-treponemal Test or Treponemal Test at First Prenatal Visit"
             />
             <input
-              onChange={event => setInput('description', event.target.value)}
+              onChange={event => setInput('nontreponemaltestat28weeks', event.target.value)}
               style={styles.input}
-              value={formState.description}
-              placeholder="Description"
+              value={formState.nontreponemaltestat28weeks}
+              placeholder="Non-treponemal Test or Treponemal Test at 28-32 Weeks Gestation"
+            />
+            <input
+              onChange={event => setInput('nontreponemaltestatdelivery', event.target.value)}
+              style={styles.input}
+              value={formState.nontreponemaltestatdelivery}
+              placeholder="Non-treponemal Test or Treponemal Test at Delivery"
             />
 
       <h4>Clinical Signs</h4>
