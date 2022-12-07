@@ -222,44 +222,117 @@ const Form = () => {
 
       <h4>Epidemiologic Lab Interpretative questions repeating group -Mother and Infant</h4>
       <input
-              onChange={event => setInput('name', event.target.value)}
+              onChange={event => setInput('subjectoflabtestperformed', event.target.value)}
               style={styles.input}
-              value={formState.name}
-              placeholder="Name"
+              value={formState.subjectoflabtestperformed}
+              placeholder="Subject of Lab Test Performed"
             />
             <input
-              onChange={event => setInput('description', event.target.value)}
+              onChange={event => setInput('testtype', event.target.value)}
               style={styles.input}
-              value={formState.description}
-              placeholder="Description"
+              value={formState.testtype}
+              placeholder="Test Type"
             />
+            <input
+              onChange={event => setInput('testresult', event.target.value)}
+              style={styles.input}
+              value={formState.testresult}
+              placeholder="Test Result"
+            />
+            <input
+              onChange={event => setInput('nontreponemalserologictestresult', event.target.value)}
+              style={styles.input}
+              value={formState.nontreponemalserologictestresult}
+              placeholder="Nontreponemal Serologic Syphilis Test Result"
+            />
+            <input
+              onChange={event => setInput('dateoflabresult', event.target.value)}
+              style={styles.input}
+              value={formState.dateoflabresult}
+              placeholder="Date of Lab Result"
+            />
+            <input
+              onChange={event => setInput('testresultquant', event.target.value)}
+              style={styles.input}
+              value={formState.testresultquant}
+              placeholder="Test Result Quantitative"
+            />
+            <input
+              onChange={event => setInput('resultunits', event.target.value)}
+              style={styles.input}
+              value={formState.resultunits}
+              placeholder="Result Units"
+            />
+            <input
+              onChange={event => setInput('specimencollectiondate', event.target.value)}
+              style={styles.input}
+              value={formState.specimencollectiondate}
+              placeholder="Specimen Collection Date"
+            />
+
 
       <h4>Infant Information</h4>
       <input
-              onChange={event => setInput('name', event.target.value)}
+              onChange={event => setInput('vitalstatus', event.target.value)}
               style={styles.input}
-              value={formState.name}
-              placeholder="Name"
+              value={formState.vitalstatus}
+              placeholder="Vital Status"
             />
             <input
-              onChange={event => setInput('description', event.target.value)}
+              onChange={event => setInput('birthweight', event.target.value)}
               style={styles.input}
-              value={formState.description}
-              placeholder="Description"
+              value={formState.birthweight}
+              placeholder="Birth Weight"
+            />
+            <input
+              onChange={event => setInput('gestationalage', event.target.value)}
+              style={styles.input}
+              value={formState.gestationalage}
+              placeholder="Gestational Age"
             />
 
       <h4>Other Infant Laboratory Interpretive Information</h4>
       <input
-              onChange={event => setInput('name', event.target.value)}
+              onChange={event => setInput('longbonexrays', event.target.value)}
               style={styles.input}
-              value={formState.name}
-              placeholder="Name"
+              value={formState.longbonexrays}
+              placeholder="Long Bone X-rays for Infant"
             />
             <input
-              onChange={event => setInput('description', event.target.value)}
+              onChange={event => setInput('darkfieldexam', event.target.value)}
               style={styles.input}
-              value={formState.description}
-              placeholder="Description"
+              value={formState.darkfieldexam}
+              placeholder="Darkfield Exam, DFA, or Special Stain Test Findings"
+            />
+            <input
+              onChange={event => setInput('csfwbccount', event.target.value)}
+              style={styles.input}
+              value={formState.csfwbccount}
+              placeholder="CSF WBC Count"
+            />
+            <input
+              onChange={event => setInput('csfproteinlevel', event.target.value)}
+              style={styles.input}
+              value={formState.csfproteinlevel}
+              placeholder="CSF Protein Level"
+            />
+            <input
+              onChange={event => setInput('csfvdrltestfinding', event.target.value)}
+              style={styles.input}
+              value={formState.csfvdrltestfinding}
+              placeholder="CSF VDRL Test Finding"
+            />
+            <input
+              onChange={event => setInput('infanttreated', event.target.value)}
+              style={styles.input}
+              value={formState.infanttreated}
+              placeholder="Infant Treated"
+            />
+            <input
+              onChange={event => setInput('stillbirthindicator', event.target.value)}
+              style={styles.input}
+              value={formState.stillbirthindicator}
+              placeholder="Stillbirth Indicator"
             />
 
             <button style={styles.button} onClick={addMMG}>Submit</button>
