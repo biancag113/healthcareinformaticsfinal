@@ -99,7 +99,7 @@ const Form1 = () => {
           placeholder="Message profile identifier"
         />
 
-      <h4>Maternal Information Section</h4>
+      <h4>Maternal Information Section </h4>
         <input
               onChange={event => setInput('motherslocalrecordid', event.target.value)}
               style={styles.input}
