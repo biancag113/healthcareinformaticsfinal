@@ -4,6 +4,50 @@ input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONL
 
 type MMG @model {
   id: ID!
-  name: String!
-  description: String
+  messageProfileIdentifier: String!
+  motherslocalrecordid: String
+  mothernationalreportingjurisdiction: String
+  mothersstateofresidence: String
+  motherscountyofresidence: String
+  motherszipcodeofresidence: String
+  mothersbirthdate: String
+  numberofpregnancies: String
+  numberoftotallivebirths: String
+  lastmenstrualperiod: String
+  dateoffirstprenatalvisit: String
+  prenatalvisitindicator: String
+  trimesteroffirstprenatalvisit: String
+  mothersethnicity: String
+  mothersrace: String
+  mothersmaritalstatus: String
+  mothershivstatusduringpregnancy: String
+  mothersclinicalstageofsyphilis: String
+  motherssurveillancestageofsyphilis: String
+  datewhenmotherreceivedfirstdoseofpencillin: String
+  trimesteroffirstpenicillin: String
+  motherstreatment: String
+  appropriateserologicresponse: String
+  nontreponemaltestatfirstvisit: String
+  nontreponemaltestat28weeks: String
+  nontreponemaltestatdelivery: String
+  clinicalsignsofcongenitalsyphilis: String
+  clinicalsignsindicator: String
+  subjectoflabtestperformed: String
+  testtype: String
+  testresult: String
+  nontreponemalserologictestresult: String
+  dateoflabresult: String
+  testresultquant: String
+  resultunits: String
+  specimencollectiondate: String
+  vitalstatus: String
+  birthweight: String
+  gestationalage: String
+  longbonexrays: String
+  darkfieldexam: String
+  csfwbccount: String
+  csfproteinlevel: String
+  csfvdrltestfinding: String
+  infanttreated: String
+  stillbirthindicator: String 
 }
