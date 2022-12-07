@@ -4,7 +4,7 @@
 export const createMMG = /* GraphQL */ `
   mutation CreateMMG(
     $input: CreateMMGInput!
-    $condition: ModelTodoConditionInput
+    $condition: ModelMMGConditionInput
   ) {
     createMMG(input: $input, condition: $condition) {
       id

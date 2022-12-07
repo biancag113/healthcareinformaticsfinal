@@ -12,7 +12,7 @@ export const getMMG = /* GraphQL */ `
     }
   }
 `;
-export const listMMGs = /* GraphQL */ `
+export const listMMG = /* GraphQL */ `
   query ListMMGs(
     $filter: ModelMMGFilterInput
     $limit: Int
