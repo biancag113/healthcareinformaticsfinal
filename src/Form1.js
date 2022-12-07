@@ -6,49 +6,96 @@ import { listMMGS } from './graphql/queries'
 import awsExports from "./aws-exports";
 Amplify.configure(awsExports);
 
-const initialState = { name: '', description: '' }
+const initialState = { 
+    messageprofileidentifier: '', 
+    motherslocalrecordid: '', 
+    mothernationalreportingjurisdiction: '',
+    mothersstateofresidence: '',
+    motherscountyofresidence: '',
+    motherszipcodeofresidence: '',
+    mothersbirthdate: '',
+    numberofpregnancies: '',
+    numberoftotallivebirths: '',
+    lastmenstrualperiod: '',
+    dateoffirstprenatalvisit: '',
+    prenatalvisitindicator: '',
+    trimesteroffirstprenatalvisit: '',
+    mothersethnicity: '',
+    mothersrace: '',
+    mothersmaritalstatus: '',
+    mothershivstatusduringpregnancy: '',
+    mothersclinicalstageofsyphilis: '',
+    motherssurveillancestageofsyphilis: '',
+    datewhenmotherreceivedfirstdoseofpencillin: '',
+    trimesteroffirstpenicillin: '',
+    motherstreatment: '',
+    appropriateserologicresponse: '',
+    nontreponemaltestatfirstvisit: '', 
+    nontreponemaltestat28weeks: '',
+    nontreponemaltestatdelivery: '',
+    clinicalsignsofcongenitalsyphilis: '',
+    clinicalsignsindicator: '',
+    subjectoflabtestperformed: '',
+    testtype: '',
+    testresult: '',
+    nontreponemalserologictestresult: '',
+    dateoflabresult: '',
+    testresultquant: '',
+    resultunits: '',
+    specimencollectiondate: '',
+    vitalstatus: '',
+    birthweight: '',
+    gestationalage: '',
+    longbonexrays: '',
+    darkfieldexam: '',
+    csfwbccount: '',
+    csfproteinlevel: '',
+    csfvdrltestfinding: '', 
+    infanttreated: '',
+    stillbirthindicator: ''
+ }
 
-const Form = () => {
+const Form1 = () => {
   const [formState, setFormState] = useState(initialState)
-  const [mmgs, setMMG] = useState([])
+  const [MMGs, setMMGs] = useState([])
 
   useEffect(() => {
-    fetchMMG()
+    fetchMMGs()
   }, [])
 
   function setInput(key, value) {
     setFormState({ ...formState, [key]: value })
   }
 
-  async function fetchMMG() {
+  async function fetchMMGs() {
     try {
-      const mmgData = await API.graphql(graphqlOperation(listMMGS))
-      const mmgs = mmgData.data.listMMGS.items
-      setMMG(mmgs)
-    } catch (err) { console.log('error fetching mmgs') }
+      const MMGData = await API.graphql(graphqlOperation(listMMGS))
+      const MMGs = MMGData.data.listMMGS.items
+      setMMGs(MMGs)
+    } catch (err) { console.log('error fetching MMGs') }
   }
 
   async function addMMG() {
     try {
-      if (!formState.name || !formState.description) return
-      const mmg = { ...formState }
-      setMMG([...mmgs, mmg])
+      if (!formState.messageprofileidentifier || !formState.motherslocalrecordid ||  !formState.mothernationalreportingjurisdiction || !formState.mothersstateofresidence || !formState.motherscountyofresidence || !formState.motherszipcodeofresidence || !formState.mothersbirthdate || !formState.numberofpregnancies || !formState.numberoftotallivebirths || !formState.lastmenstrualperiod || !formState.dateoffirstprenatalvisit || !formState.prenatalvisitindicator || !formState.trimesteroffirstprenatalvisit || !formState.mothersethnicity || !formState.mothersrace || !formState.mothersmaritalstatus || !formState.mothershivstatusduringpregnancy || !formState.mothersclinicalstageofsyphilis || !formState.motherssurveillancestageofsyphilis || !formState.datewhenmotherreceivedfirstdoseofpencillin || !formState.trimesteroffirstpenicillin || !formState.motherstreatment || !formState.appropriateserologicresponse || !formState.nontreponemaltestatfirstvisit || !formState.nontreponemaltestat28weeks || !formState.nontreponemaltestatdelivery || !formState.clinicalsignsofcongenitalsyphilis || !formState.clinicalsignsindicator || !formState.subjectoflabtestperformed || !formState.testtype || !formState.testresult || !formState.nontreponemalserologictestresult || !formState.dateoflabresult || !formState.testresultquant || !formState.resultunits || !formState.specimencollectiondate || !formState.vitalstatus || !formState.birthweight || !formState.gestationalage || !formState.longbonexrays || !formState.darkfieldexam || !formState.csfwbccount || !formState.csfproteinlevel || !formState.csfvdrltestfinding || !formState.infanttreated || !formState.stillbirthindicator) return
+      const MMG = { ...formState }
+      setMMGs([...MMGs, MMG])
       setFormState(initialState)
-      await API.graphql(graphqlOperation(createMMG, {input: mmg}))
+      await API.graphql(graphqlOperation(createMMG, {input: MMG}))
     } catch (err) {
-      console.log('error creating mmg:', err)
+      console.log('error creating MMG:', err)
     }
   }
 
   return (
     <div style={styles.container}>
 
-
       <h4>Message Profile Identifier</h4>
+      
         <input
-          onChange={event => setInput('name', event.target.value)}
+          onChange={event => setInput('messageprofileidentifier', event.target.value)}
           style={styles.input}
-          value={formState.name}
+          value={formState.messageprofileidentifier}
           placeholder="Message profile identifier"
         />
 
@@ -338,28 +385,119 @@ const Form = () => {
             <button style={styles.button} onClick={addMMG}>Submit</button>
 
 
+
+
+
       {
-          mmgs.map((mmg, index) => (
-            <div key={mmg.id ? mmg.id : index} style={styles.mmg}>
-              <p style={styles.mmgName}>{mmg.name}</p>
-              <p style={styles.mmgDescription}>{mmg.description}</p>
-          
+        MMGs.map((MMG, index) => (
+          <div key={MMG.id ? MMG.id : index} style={styles.MMG}>
+
+            <p style={styles.MMGmessageprofileidentifier}>{MMG.messageprofileidentifier}</p>
+
+            <p style={styles.MMGmotherslocalrecordid}>{MMG.motherslocalrecordid}</p>
+
+            <p style={styles.MMGmothernationalreportingjurisdiction}>{MMG.mothernationalreportingjurisdiction}</p>
+
+            <p style={styles.MMGmothersstateofresidence}>{MMG.mothersstateofresidence}</p>
+
+            <p style={styles.MMGmotherscountyofresidence}>{MMG.motherscountyofresidence}</p>
+
+            <p style={styles.MMGmotherszipcodeofresidence}>{MMG.motherszipcodeofresidence}</p>
+
+            <p style={styles.MMGmothersbirthdate}>{MMG.mothersbirthdate}</p>
+
+            <p style={styles.MMGnumberofpregnancies}>{MMG.numberofpregnancies}</p>
+
+            <p style={styles.MMGnumberoftotallivebirths}>{MMG.numberoftotallivebirths}</p>
+
+            <p style={styles.MMGlastmenstrualperiod}>{MMG.lastmenstrualperiod}</p>
+
+            <p style={styles.MMGdateoffirstprenatalvisit}>{MMG.dateoffirstprenatalvisit}</p>
+
+            <p style={styles.MMGprenatalvisitindicator}>{MMG.prenatalvisitindicator}</p>
+
+            <p style={styles.MMGtrimesteroffirstprenatalvisit}>{MMG.trimesteroffirstprenatalvisit}</p>
+
+            <p style={styles.MMGmothersethnicity}>{MMG.mothersethnicity}</p>
+
+            <p style={styles.MMGmothersrace}>{MMG.mothersrace}</p>
+
+            <p style={styles.MMGmothersmaritalstatus}>{MMG.mothersmaritalstatus}</p>
+
+            <p style={styles.MMGmothershivstatusduringpregnancy}>{MMG.mothershivstatusduringpregnancy}</p>
+
+            <p style={styles.MMGmothersclinicalstageofsyphilis}>{MMG.mothersclinicalstageofsyphilis}</p>
+
+            <p style={styles.MMGmotherssurveillancestageofsyphilis}>{MMG.motherssurveillancestageofsyphilis}</p>
+
+            <p style={styles.MMGdatewhenmotherreceivedfirstdoseofpencillin}>{MMG.datewhenmotherreceivedfirstdoseofpencillin}</p>
+
+            <p style={styles.MMGtrimesteroffirstpenicillin}>{MMG.trimesteroffirstpenicillin}</p>
+
+            <p style={styles.MMGmotherstreatment}>{MMG.motherstreatment}</p>
+
+            <p style={styles.MMGappropriateserologicresponse}>{MMG.appropriateserologicresponse}</p>
+
+            <p style={styles.MMGnontreponemaltestatfirstvisit}>{MMG.nontreponemaltestatfirstvisi}</p>
+
+            <p style={styles.nontreponemaltestat28weeks}>{MMG.nontreponemaltestat28weeks}</p>
+            
+            <p style={styles.nontreponemaltestatdelivery}>{MMG.nontreponemaltestatdelivery}</p>
+
+            <p style={styles.clinicalsignsofcongenitalsyphilis}>{MMG.clinicalsignsofcongenitalsyphilis}</p>
+
+            <p style={styles.clinicalsignsindicator}>{MMG.clinicalsignsindicator}</p>
+
+            <p style={styles.subjectoflabtestperformed}>{MMG.subjectoflabtestperformed}</p>
+
+            <p style={styles.testtype}>{MMG.testtype}</p>
+
+            <p style={styles.testresult}>{MMG.testresult}</p>
+
+            <p style={styles.nontreponemalserologictestresult}>{MMG.nontreponemalserologictestresult}</p>
+
+            <p style={styles.dateoflabresult}>{MMG.dateoflabresult}</p>
+
+            <p style={styles.testresultquant}>{MMG.testresultquant}</p>
+
+            <p style={styles.resultunits}>{MMG.resultunits}</p>
+
+            <p style={styles.specimencollectiondate}>{MMG.specimencollectiondate}</p>
+
+            <p style={styles.vitalstatus}>{MMG.vitalstatus}</p>
+
+            <p style={styles.birthweight}>{MMG.birthweight}</p>
+
+            <p style={styles.gestationalage}>{MMG.gestationalage}</p>
+
+            <p style={styles.longbonexrays}>{MMG.longbonexrays}</p>
+
+            <p style={styles.darkfieldexam}>{MMG.darkfieldexam}</p>
+
+            <p style={styles.csfwbccount}>{MMG.csfwbccount}</p>
+
+            <p style={styles.csfproteinlevel}>{MMG.csfproteinlevel}</p>
+
+            <p style={styles.csfvdrltestfinding}>{MMG.csfvdrltestfinding}</p>
+
+            <p style={styles.infanttreated}>{MMG.infanttreated}</p>
+
+            <p style={styles.stillbirthindicator}>{MMG.stillbirthindicator}</p>
+
           </div>
         ))
       }
     </div>
-
-    
   )
 }
 
 const styles = {
-  container: { width: 1000, margin: '0 auto', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: 20 },
-  mmg: {  marginBottom: 15 },
+  container: { width: 400, margin: '0 auto', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: 20 },
+  MMG: {  marginBottom: 15 },
   input: { border: 'none', backgroundColor: '#ddd', marginBottom: 10, padding: 8, fontSize: 18 },
-  mmgName: { fontSize: 20, fontWeight: 'bold' },
-  mmgDescription: { marginBottom: 0 },
-  button: { backgroundColor: 'orange', color: 'white', outline: 'none', fontSize: 18, padding: '12px 0px' }
+  MMGmessageprofileidentifier: { fontSize: 20, fontWeight: 'bold' },
+  MMGDescription: { marginBottom: 0 },
+  button: { backgroundColor: 'black', color: 'white', outline: 'none', fontSize: 18, padding: '12px 0px' }
 }
 
-export default Form
+export default Form1

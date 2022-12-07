@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Form from './Form'
+import Form1 from './Form1'
 
 function App() {
   return (
@@ -9,8 +9,8 @@ function App() {
         <p style={styles.mmgName}>
           CDC - Congenital Syphillis Reporting
         </p>
-        <Form>
-        </ Form>
+        <Form1>
+        </ Form1>
         
       </header>
     </div>
