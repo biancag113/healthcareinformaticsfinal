@@ -8,8 +8,52 @@ export const createMMG = /* GraphQL */ `
   ) {
     createMMG(input: $input, condition: $condition) {
       id
-      name
-      description
+      messageProfileIdentifier
+      motherslocalrecordid
+      mothernationalreportingjurisdiction
+      mothersstateofresidence
+      motherscountyofresidence
+      motherszipcodeofresidence
+      mothersbirthdate
+      numberofpregnancies
+      numberoftotallivebirths
+      lastmenstrualperiod
+      dateoffirstprenatalvisit
+      prenatalvisitindicator
+      trimesteroffirstprenatalvisit
+      mothersethnicity
+      mothersrace
+      mothersmaritalstatus
+      mothershivstatusduringpregnancy
+      mothersclinicalstageofsyphilis
+      motherssurveillancestageofsyphilis
+      datewhenmotherreceivedfirstdoseofpencillin
+      trimesteroffirstpenicillin
+      motherstreatment
+      appropriateserologicresponse
+      nontreponemaltestatfirstvisit
+      nontreponemaltestat28weeks
+      nontreponemaltestatdelivery
+      clinicalsignsofcongenitalsyphilis
+      clinicalsignsindicator
+      subjectoflabtestperformed
+      testtype
+      testresult
+      nontreponemalserologictestresult
+      dateoflabresult
+      testresultquant
+      resultunits
+      specimencollectiondate
+      vitalstatus
+      birthweight
+      gestationalage
+      longbonexrays
+      darkfieldexam
+      csfwbccount
+      csfproteinlevel
+      csfvdrltestfinding
+      infanttreated
+      stillbirthindicator
       createdAt
       updatedAt
     }
@@ -22,8 +66,52 @@ export const updateMMG = /* GraphQL */ `
   ) {
     updateMMG(input: $input, condition: $condition) {
       id
-      name
-      description
+      messageProfileIdentifier
+      motherslocalrecordid
+      mothernationalreportingjurisdiction
+      mothersstateofresidence
+      motherscountyofresidence
+      motherszipcodeofresidence
+      mothersbirthdate
+      numberofpregnancies
+      numberoftotallivebirths
+      lastmenstrualperiod
+      dateoffirstprenatalvisit
+      prenatalvisitindicator
+      trimesteroffirstprenatalvisit
+      mothersethnicity
+      mothersrace
+      mothersmaritalstatus
+      mothershivstatusduringpregnancy
+      mothersclinicalstageofsyphilis
+      motherssurveillancestageofsyphilis
+      datewhenmotherreceivedfirstdoseofpencillin
+      trimesteroffirstpenicillin
+      motherstreatment
+      appropriateserologicresponse
+      nontreponemaltestatfirstvisit
+      nontreponemaltestat28weeks
+      nontreponemaltestatdelivery
+      clinicalsignsofcongenitalsyphilis
+      clinicalsignsindicator
+      subjectoflabtestperformed
+      testtype
+      testresult
+      nontreponemalserologictestresult
+      dateoflabresult
+      testresultquant
+      resultunits
+      specimencollectiondate
+      vitalstatus
+      birthweight
+      gestationalage
+      longbonexrays
+      darkfieldexam
+      csfwbccount
+      csfproteinlevel
+      csfvdrltestfinding
+      infanttreated
+      stillbirthindicator
       createdAt
       updatedAt
     }
@@ -36,8 +124,52 @@ export const deleteMMG = /* GraphQL */ `
   ) {
     deleteMMG(input: $input, condition: $condition) {
       id
-      name
-      description
+      messageProfileIdentifier
+      motherslocalrecordid
+      mothernationalreportingjurisdiction
+      mothersstateofresidence
+      motherscountyofresidence
+      motherszipcodeofresidence
+      mothersbirthdate
+      numberofpregnancies
+      numberoftotallivebirths
+      lastmenstrualperiod
+      dateoffirstprenatalvisit
+      prenatalvisitindicator
+      trimesteroffirstprenatalvisit
+      mothersethnicity
+      mothersrace
+      mothersmaritalstatus
+      mothershivstatusduringpregnancy
+      mothersclinicalstageofsyphilis
+      motherssurveillancestageofsyphilis
+      datewhenmotherreceivedfirstdoseofpencillin
+      trimesteroffirstpenicillin
+      motherstreatment
+      appropriateserologicresponse
+      nontreponemaltestatfirstvisit
+      nontreponemaltestat28weeks
+      nontreponemaltestatdelivery
+      clinicalsignsofcongenitalsyphilis
+      clinicalsignsindicator
+      subjectoflabtestperformed
+      testtype
+      testresult
+      nontreponemalserologictestresult
+      dateoflabresult
+      testresultquant
+      resultunits
+      specimencollectiondate
+      vitalstatus
+      birthweight
+      gestationalage
+      longbonexrays
+      darkfieldexam
+      csfwbccount
+      csfproteinlevel
+      csfvdrltestfinding
+      infanttreated
+      stillbirthindicator
       createdAt
       updatedAt
     }
