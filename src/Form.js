@@ -30,7 +30,7 @@ const Form = () => {
 
   async function addMMG() {
     try {
-      if (!formState.name || !formState.description) return
+      if (!formState.messageProfileIdentifier || !formState.motherslocalrecordid) return
       const mmg = { ...formState }
       setMMG([...mmgs, mmg])
       setFormState(initialState)
