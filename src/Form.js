@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Amplify, API, graphqlOperation } from 'aws-amplify'
 import { createMMG } from './graphql/mutations'
 import { listMMG } from './graphql/queries'
-import { deleteMMG } from './graphql/queries'
 
 import awsExports from "./aws-exports";
 Amplify.configure(awsExports);
@@ -208,17 +207,17 @@ const Form = () => {
             />
 
       <h4>Clinical Signs</h4>
-      <input
-              onChange={event => setInput('name', event.target.value)}
+          <input
+              onChange={event => setInput('clinicalsignsofcongenitalsyphilis', event.target.value)}
               style={styles.input}
-              value={formState.name}
-              placeholder="Name"
+              value={formState.clinicalsignsofcongenitalsyphilis}
+              placeholder="Clinical Signs of Congenital Syphilis"
             />
             <input
-              onChange={event => setInput('description', event.target.value)}
+              onChange={event => setInput('clinicalsignsindicator', event.target.value)}
               style={styles.input}
-              value={formState.description}
-              placeholder="Description"
+              value={formState.clinicalsignsindicator}
+              placeholder="Clinical Signs Indicator"
             />
 
       <h4>Epidemiologic Lab Interpretative questions repeating group -Mother and Infant</h4>
@@ -282,12 +281,12 @@ const Form = () => {
 }
 
 const styles = {
-  container: { width: 400, margin: '0 auto', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: 20 },
+  container: { width: 1000, margin: '0 auto', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: 20 },
   mmg: {  marginBottom: 15 },
   input: { border: 'none', backgroundColor: '#ddd', marginBottom: 10, padding: 8, fontSize: 18 },
   mmgName: { fontSize: 20, fontWeight: 'bold' },
   mmgDescription: { marginBottom: 0 },
-  button: { backgroundColor: 'black', color: 'white', outline: 'none', fontSize: 18, padding: '12px 0px' }
+  button: { backgroundColor: 'orange', color: 'white', outline: 'none', fontSize: 18, padding: '12px 0px' }
 }
 
 export default Form
