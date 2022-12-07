@@ -114,6 +114,78 @@ const Form = () => {
             value={formState.dateoffirstprenatalvisit}
             placeholder="Date of first pernatal visit"
           />
+        <input
+            onChange={event => setInput('prenatalvisitindicator', event.target.value)}
+            style={styles.input}
+            value={formState.prenatalvisitindicator}
+            placeholder="Prenatal visit indicator"
+          />
+        <input
+            onChange={event => setInput('trimesteroffirstprenatalvisit', event.target.value)}
+            style={styles.input}
+            value={formState.trimesteroffirstprenatalvisit}
+            placeholder="Trimester of first prenatal visit"
+          />
+        <input
+            onChange={event => setInput('mothersethnicity', event.target.value)}
+            style={styles.input}
+            value={formState.mothersethnicity}
+            placeholder="Mother's ethnicity"
+          />
+        <input
+            onChange={event => setInput('mothersrace', event.target.value)}
+            style={styles.input}
+            value={formState.mothersrace}
+            placeholder="Mother's race"
+          />
+        <input
+            onChange={event => setInput('mothersmaritalstatus', event.target.value)}
+            style={styles.input}
+            value={formState.mothersmaritalstatus}
+            placeholder="Mother's marital status"
+          />
+        <input
+            onChange={event => setInput('mothershivstatusduringpregnancy', event.target.value)}
+            style={styles.input}
+            value={formState.mothershivstatusduringpregnancy}
+            placeholder="Mother's HIV Status During Pregnancy"
+          />
+        <input
+            onChange={event => setInput('mothersclinicalstageofsyphilis', event.target.value)}
+            style={styles.input}
+            value={formState.mothersclinicalstageofsyphilis}
+            placeholder="Mother's Clinical Stage of Syphilis During Pregnancy"
+          />
+        <input
+            onChange={event => setInput('motherssurveillancestageofsyphilis', event.target.value)}
+            style={styles.input}
+            value={formState.motherssurveillancestageofsyphilis}
+            placeholder="Mother's Surveillance Stage of Syphilis During Pregnancy"
+          />
+        <input
+            onChange={event => setInput('datewhenmotherreceivedfirstdoseofpencillin', event.target.value)}
+            style={styles.input}
+            value={formState.datewhenmotherreceivedfirstdoseofpencillin}
+            placeholder="Date When Mother Received Her First Dose of Penicillin"
+          />
+        <input
+            onChange={event => setInput('trimesteroffirstpenicillin', event.target.value)}
+            style={styles.input}
+            value={formState.trimesteroffirstpenicillin}
+            placeholder="Trimester in Which Mother Received Her First Dose of Penicillin"
+          />
+        <input
+            onChange={event => setInput('motherstreatment', event.target.value)}
+            style={styles.input}
+            value={formState.motherstreatment}
+            placeholder="Mother's Treatment"
+          />
+        <input
+            onChange={event => setInput('appropriateserologicresponse', event.target.value)}
+            style={styles.input}
+            value={formState.appropriateserologicresponse}
+            placeholder="Appropriate Serologic Response"
+          />
 
       <h4>Maternal Laboratory Interpretive Information</h4>
         <input
